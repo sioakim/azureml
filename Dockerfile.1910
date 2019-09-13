@@ -21,4 +21,6 @@ RUN conda install -y conda=${CONDA_VERSION} python=${PYTHON_VERSION} && \
     rm -rf /opt/miniconda/pkgs && \
     find / -type d -name __pycache__ -prune -exec rm -rf {} \;
 
+RUN pip install --upgrade certifi pip setuptools tqdm wheel urllib3
+
 RUN conda update -n base -c defaults conda
