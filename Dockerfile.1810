@@ -8,6 +8,7 @@ ENV PATH /opt/miniconda/bin:$PATH
 
 RUN apt-get update --fix-missing && \
     apt-get install -y wget bzip2 && \
+    apt-get -y dist-upgrade && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
